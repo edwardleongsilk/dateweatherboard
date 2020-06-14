@@ -28,21 +28,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Paper style={{ height: "100vh" }}>
         <Grid container>
-          <FormControlLabel
-            control={
-              <Switch
-                checked={isDarkMode}
-                onChange={() => {
-                  setIsDarkMode(!isDarkMode);
-                }}
-                name="checkedA"
-                inputProps={{ "aria-label": "secondary checkbox" }}
-              />
-            }
-            label="Gilad Gray"
-          />
-
-          <Header />
+          <Header setIsDarkMode={setIsDarkMode} isDarkMode={isDarkMode} />
         </Grid>
         <Grid container>
           <Content />
